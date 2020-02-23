@@ -36,6 +36,18 @@ class Activities():
     def add(self, activity: Activity):
         self.activities.append(activity)
 
+    def _select_earliest_after(self, after = None):
+        """ Select activity that finishes at earliest
+        from the remaining activities
+        """
+        earliest = None
+        for a in self.activities:
+            if after == None or a.start >= after:
+                if earliest == None or earliest.end > a.end:
+                    earliest = a
+
+        return earliest
+
     def select_activities(self):
         # initialize solution
         solution = []
@@ -45,23 +57,19 @@ class Activities():
             return solution
 
         n = len(self.activities)
+        after = None
+        # all activities can be part of solution, so we can have as many
+        # elements in the solution as existing activities
         for i in range(n):
+            earliest = self._select_earliest_after(after)
 
-            # Select activity that finishes at earliest from the remaining activities
-            min = None
-            for j in range(i+1, n):
-                if not min:
-                    min = self.activities[j]
-                elif min.end > self.activities[j].end:
-                    min = self.activities[j]
-
-            # check feasibility of selected activity and append to solution
-            if not min:
+            # check feasibility of selected activity
+            if not earliest:
                 return solution
-            elif len(solution) == 0:
-                solution.append(min)
-            elif min.start >= solution[-1].end:
-                solution.append(min)
+            solution.append(earliest)
+
+            # make sure the search space is updated
+            after = earliest.end
 
         return solution
 
@@ -93,7 +101,7 @@ if __name__ == "__main__":
     a5 = Activity("a5", 5 ,7)
     a6 = Activity("a6", 8 ,9)
 
-    activities = Activities([a1, a2, a3, a4, a5, a6])
+    activities = Activities([a2, a1, a4, a5, a3, a6])
 
     solution = activities.select_activities()
 
