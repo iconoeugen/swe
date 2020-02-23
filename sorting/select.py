@@ -1,5 +1,14 @@
-#!/bin/python
+#!/usr/bin/python
+"""Selection sort
 
+Time complexity:
+    Big-Oh:    O(n^2)
+    Big-Omega: O(n^2)
+    Big-Theta: O(n^2)
+
+Space complexity:
+    O(1)
+"""
 def sort(list):
     l = len(list)
     steps = 0
