@@ -1,5 +1,15 @@
 #!/bin/python
 
+# Heap sort - stable sorting algorithm (doesn't change the occurrence of two similar elements in the list while sorting)
+#
+# Time complexity:
+#   Big-O:     O(n^2)
+#   Big-omega: O(n)
+#   Big-theta: O(n^2)
+#
+# Space complexity:
+#   O(1)
+
 def sort(list):
     l = len(list)
     steps = 0

@@ -1,5 +1,5 @@
 #!/bin/python
-# Insert sort - stable sorting algoritm (doesn't change the occurence of two similar elements in the list while sorting)
+# Insert sort - stable sorting algorithm (doesn't change the occurrence of two similar elements in the list while sorting)
 #
 # Time complexity:
 #   Big-O:     O(n^2)
@@ -13,7 +13,7 @@ def sort(list):
     l = len(list)
     steps = 0
 
-    for i in range(0, l):
+    for i in range(1, l):
         j = i
         while j > 0 and list[j-1] > list[j]:
             list[j-1], list[j] = list[j], list[j-1]

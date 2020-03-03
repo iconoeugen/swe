@@ -1,5 +1,5 @@
 #!/bin/python
-# Merge sort - stable sorting algoritm (doesn't change the occurence of two similar elements in the list while sorting)
+# Merge sort - stable sorting algorithm (doesn't change the occurrence of two similar elements in the list while sorting)
 #
 # Time complexity:
 #   Big-O:     O(n * log n)
@@ -26,7 +26,7 @@ def merge(list, low, middle, high):
             new_list.append(list[second])
             second += 1
 
-    # copy remainig elements from first list
+    # copy remaining elements from first list
     while first <= middle:
         new_list.append(list[first])
         first += 1

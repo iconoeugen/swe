@@ -1,5 +1,5 @@
 #!/bin/python
-# Quick sort - unstable sorting algoritm (might change the occurence of two similar elements in the list while sorting)
+# Quick sort - unstable sorting algorithm (might change the occurrence of two similar elements in the list while sorting)
 #
 # Time complexity:
 #   Big-O:     O(n^2)

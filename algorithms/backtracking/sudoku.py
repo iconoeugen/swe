@@ -60,7 +60,7 @@ def sudoku(solution, row = 0, col = 0):
 
 if __name__ == "__main__":
     unsolved = [
-        [   9, None,    4, None,    5,    2, None, None,    1],
+        [None, None,    4, None,    5,    2, None, None,    1],
         [None,    6, None,    8,    1, None,    2,    5,    4],
         [None, None,    5, None,    7, None, None,    8,    3],
         [None, None, None, None, None,    5, None, None, None],

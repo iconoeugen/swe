@@ -1,5 +1,5 @@
 #!/bin/python
-# Heap sort - unstable sorting algoritm (might change the occurence of two similar elements in the list while sorting)
+# Heap sort - unstable sorting algorithm (might change the occurrence of two similar elements in the list while sorting)
 #
 # Time complexity:
 #   Big-O:     O(n * log n)
